@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', () => {
             timing: 20000, // 30 seconds
             attempts: 22,
         },
-        2: {س
+        2: {
             name: 'Chain Cube 2048',
             appToken: 'd1690a07-3780-4068-810f-9b5bbf2931b2',
             promoId: 'b4170868-cef0-424f-8eb9-be0622e8e8e3',
