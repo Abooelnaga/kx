@@ -56,19 +56,26 @@ document.addEventListener('DOMContentLoaded', () => {
             timing: 20000, // 20 seconds
             attempts: 20,
         },
-        9: {
-            name: 'Mud Racing',
-            appToken: '8814a785-97fb-4177-9193-ca4180ff9da8',
-            promoId: '8814a785-97fb-4177-9193-ca4180ff9da8',
-            timing: 20000, // 20 seconds
-            attempts: 20,
-        },
         10: {
             name: 'Cafe Dash',
             appToken: 'bc0971b8-04df-4e72-8a3e-ec4dc663cd11',
             promoId: 'bc0971b8-04df-4e72-8a3e-ec4dc663cd11',
             timing: 20000, // 20 seconds
             attempts: 20,
+        },
+        11: {
+            name: 'Zoopolis',
+            appToken: 'b2436c89-e0aa-4aed-8046-9b0515e1c46b',
+            promoId: 'b2436c89-e0aa-4aed-8046-9b0515e1c46b',
+            timing: 20000, // 20 seconds
+            attempts: 20,
+        },
+        12: {
+            name: 'Gangs Wars',
+            appToken: 'b6de60a0-e030-48bb-a551-548372493523',
+            promoId: 'c7821fa7-6632-482c-9635-2bd5798585f9',
+            timing: 40000, // 40 seconds
+            attempts: 30,
         }
     };
 
@@ -93,19 +100,22 @@ document.addEventListener('DOMContentLoaded', () => {
     let selectedGame = null;
 
     sourceCode.addEventListener('click', () => {
-        window.open('https://t.me/KeysGen', '_blank');
+        window.open('https://github.com/ShafiqSadat/HamsterKeyGenWeb', '_blank');
     });
     
-    gameOptions.forEach(option => {
-        option.addEventListener('click', () => {
-            gameOptions.forEach(opt => opt.classList.remove('selected'));
-            option.classList.add('selected');
-            selectedGame = option.dataset.game;
+gameOptions.forEach(option => {
+    option.addEventListener('click', () => {
+        gameOptions.forEach(opt => opt.classList.remove('selected'));
+        option.classList.add('selected');
+        selectedGame = option.dataset.game;
 
-            keyCountGroup.classList.remove('hidden');
-            startBtn.classList.remove('hidden');
-        });
+        keyCountGroup.classList.remove('hidden');
+        startBtn.classList.remove('hidden');
+        
+        // Smooth scroll to the key count group
+        keyCountGroup.scrollIntoView({ behavior: 'smooth', block: 'center' });
     });
+});
 
     keyRange.addEventListener('input', () => {
         keyValue.innerText = keyRange.value;
